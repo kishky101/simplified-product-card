@@ -1,0 +1,198 @@
+.product-card {
+    background-color: var(--white-color);
+    display: grid;
+    grid-template-columns: 280px auto;
+    max-width: 677px;
+    border-radius: 1.6rem;
+    overflow: hidden;
+    margin: 1rem;
+
+    & &__image {
+        max-width: 100%;
+        height: 100%;
+        overflow: hidden;
+
+        img {
+            max-width: 100%;
+            height: 100%;
+            overflow: hidden;
+
+            &:first-of-type {
+                display: block;
+            }
+            &:last-of-type {
+                display: none;
+            }
+        }
+    }
+
+    & &__details {
+        padding: 4rem 3.2rem;
+    }
+
+    & &__category {
+        font-family: var(--Montserrat-font);
+        font-size: 1.2rem;
+        font-weight: 500;
+        color: var(--design-color4);
+        margin-bottom: .8rem;line-height: 140%;
+    }
+
+    & &__info {
+        display: flex;
+        flex-direction: column;
+        gap: 1.2rem;
+        margin-bottom: 1.6rem;
+    }
+
+    & &__title {
+        font-size: 3.2rem;
+        font-weight: 500;
+        font-family: var(--Noto-Serif-font);
+        color: var(--black-color);
+        line-height: 110%;
+        padding-right: 5rem;
+        letter-spacing: -0.64px;
+    }
+
+    & &__desc {
+        font-size: 1.2rem;
+        font-family: var(--Montserrat-font);
+        color: var(--grey-grade2);
+        line-height: 140%;
+        letter-spacing: -0.12px;
+        padding-right: 1.8rem;
+        font-weight: 500;
+    }
+
+    & &__colors {
+        display: flex;
+        flex-direction: column;
+        gap: .8rem;
+        margin-bottom: 2.4rem;
+
+        p {
+            font-family: var(--Montserrat-font);
+            font-weight: 500;
+            font-size: 1.2rem;
+            line-height: 140%;
+            color: var(--black-color);
+            letter-spacing: -0.12px;
+        }
+    }
+
+    & &__color-options {
+        display: flex;
+        gap: 1.6rem;
+    }
+
+    & &__color {
+        display: block;
+        width: 2.4rem;
+        height: 2.4rem;
+        border-radius: 50%;
+        cursor: pointer;
+
+        &--1 {
+            background-color: var(--design-color1);
+        }
+        &--2 {
+            background-color: var(--design-color2);
+        }
+        &--3 {
+            background-color: var(--design-color3);
+        }
+        &--4 {
+            background-color: var(--grey-grade1);
+        }
+
+        &--selected {
+            border: 1px solid black;
+            border-radius: 50%;
+        }
+    }
+
+    & &__price {
+        display: flex;
+        gap: .8rem;
+        align-items: flex-end;
+        max-height: 2.6rem;
+        margin-bottom: 1.6rem;
+
+        p {
+            font-family: var(--Noto-Serif-font);
+            font-weight: 500;
+
+            &:first-of-type {
+                font-size: 2.4rem;
+                letter-spacing: -0.48px;
+
+                span {
+                    font-size: 1.4rem;
+                }
+            }
+
+            &:last-of-type {
+                font-size: 1.4rem;
+                color: var(--grey-grade2);
+                text-decoration: line-through;
+                letter-spacing: -0.28px;
+                span {
+                    font-size: 1.2rem;
+                }
+            }
+        }
+    }
+
+    & &__button {
+        width: 100%;
+
+        button {
+            width: 100%;
+            padding: 1.5rem 2.4rem;
+            border-radius: 1.2rem;
+            background-color: var(--design-color4);
+            color: var(--white-color);
+            font-size: 1.4rem;
+            font-family: var(--Montserrat-font);
+            border: none;
+            cursor: pointer;
+            line-height: 140%;
+
+            &:hover {
+                background-color: var(--button-hover-color);
+            }
+
+            &:focus {
+                background-color: var(--button-press-color);
+            }
+        }
+    }
+
+    @media screen and (max-width: 700px) {
+        grid-template-columns: 1fr;
+        grid-template-rows: 246px auto;
+        max-width: 343px;
+
+        & &__image {
+
+            img {
+    
+                &:first-of-type {
+                    display: none;
+                }
+                &:last-of-type {
+                    display: block;
+                }
+            }
+        }
+
+        & &__details {
+            padding: 2.4rem 1.6rem 1.6rem;
+        }
+
+        & &__desc {
+            padding-right: 0rem;
+        }
+    }
+}
